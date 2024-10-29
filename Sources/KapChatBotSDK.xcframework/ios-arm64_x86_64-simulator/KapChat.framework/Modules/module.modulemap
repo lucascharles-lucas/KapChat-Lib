@@ -1,0 +1,6 @@
+framework module KapChat {
+  umbrella header "KapChat.h"
+  export *
+
+  module * { export * }
+}
