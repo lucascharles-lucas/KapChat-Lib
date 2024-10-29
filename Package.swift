@@ -5,17 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "KapChatLib",
+    platforms: [
+        .iOS(.v16) // iOS version target
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "KapChatLib",
-            targets: ["KapChatLib"]),
+            targets: ["KapChat"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "KapChatLib"),
-
+        // The destination of the framework you will obfuscate the code
+        .binaryTarget(name: "KapChat", path: "./Sources/KapChatBotSDK.xcframework")
     ]
 )
